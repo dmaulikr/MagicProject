@@ -38,3 +38,19 @@ public class AttackCommand : ICommand
         actor_.Attack();
     }
 }
+public class BuffCommand : ICommand
+{
+    private IGameActor actor_;
+    private Buff buff_;
+
+    public BuffCommand(IGameActor actor, Buff buff)
+    {
+        actor_ = actor;
+        buff_ = buff;
+    }
+
+    public void execute()
+    {
+        actor_.UseBuff(actor_, buff_);
+    }
+}

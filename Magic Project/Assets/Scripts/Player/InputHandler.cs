@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class InputHandler : IComponent {
 
-    private PlayerMovement playerMovement_;
+    private PlayerActions playerMovement_;
     private ICommand zKey_;
     private ICommand xKey_;
 
-    public InputHandler(PlayerMovement playerMovement)
+    public InputHandler(PlayerActions playerMovement)
     {
         playerMovement_ = playerMovement;
 
         zKey_ = new AttackCommand(playerMovement_);
-        xKey_ = new AttackCommand(playerMovement_);
+        xKey_ = new BuffCommand(playerMovement_, Buff.BUFF_HEAL);
     }
 
     public void update()

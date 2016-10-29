@@ -5,9 +5,9 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Animator))]
 public class Player : MonoBehaviour {
 
-    private PlayerMovement movement_;
-    private IComponent animation_;
-    private IComponent input_;
+    private PlayerActions movement_;
+    private PlayerAnimation animation_;
+    private InputHandler input_;
     private List<IComponent> components_ = new List<IComponent>();
 
     private Rigidbody2D rb2D_;
@@ -21,9 +21,12 @@ public class Player : MonoBehaviour {
         rb2D_ = GetComponent<Rigidbody2D>();
         animator_ = GetComponent<Animator>();
 
-        movement_ = new PlayerMovement(transform, speed_, rb2D_);
+        movement_ = new PlayerActions(transform, speed_, rb2D_);
         animation_ = new PlayerAnimation(animator_, rb2D_);
         input_ = new InputHandler(movement_);
+
+        movement_.addObserver(animation_);
+        animation_.addObserver(movement_);
 
         components_.Add(animation_);
         components_.Add(input_);

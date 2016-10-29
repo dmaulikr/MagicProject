@@ -1,6 +1,3 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public interface IComponent {
+﻿public interface IComponent {
     void update();
 }
