@@ -1,9 +1,59 @@
 fileFormatVersion: 2
 guid: 73755182acfee38479abdfc39b21fd94
-timeCreated: 1477670510
+timeCreated: 1477765798
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: skeleton spritesheet calciumtrice_0
+    21300002: skeleton spritesheet calciumtrice_1
+    21300004: skeleton spritesheet calciumtrice_2
+    21300006: skeleton spritesheet calciumtrice_3
+    21300008: skeleton spritesheet calciumtrice_4
+    21300010: skeleton spritesheet calciumtrice_5
+    21300012: skeleton spritesheet calciumtrice_6
+    21300014: skeleton spritesheet calciumtrice_7
+    21300016: skeleton spritesheet calciumtrice_8
+    21300018: skeleton spritesheet calciumtrice_9
+    21300020: skeleton spritesheet calciumtrice_10
+    21300022: skeleton spritesheet calciumtrice_11
+    21300024: skeleton spritesheet calciumtrice_12
+    21300026: skeleton spritesheet calciumtrice_14
+    21300028: skeleton spritesheet calciumtrice_16
+    21300030: skeleton spritesheet calciumtrice_18
+    21300032: skeleton spritesheet calciumtrice_20
+    21300034: skeleton spritesheet calciumtrice_22
+    21300036: skeleton spritesheet calciumtrice_24
+    21300038: skeleton spritesheet calciumtrice_26
+    21300040: skeleton spritesheet calciumtrice_27
+    21300042: skeleton spritesheet calciumtrice_28
+    21300044: skeleton spritesheet calciumtrice_29
+    21300046: skeleton spritesheet calciumtrice_30
+    21300048: skeleton spritesheet calciumtrice_31
+    21300050: skeleton spritesheet calciumtrice_33
+    21300052: skeleton spritesheet calciumtrice_35
+    21300054: skeleton spritesheet calciumtrice_37
+    21300056: skeleton spritesheet calciumtrice_39
+    21300058: skeleton spritesheet calciumtrice_41
+    21300060: skeleton spritesheet calciumtrice_42
+    21300062: skeleton spritesheet calciumtrice_43
+    21300064: skeleton spritesheet calciumtrice_45
+    21300066: skeleton spritesheet calciumtrice_47
+    21300068: skeleton spritesheet calciumtrice_49
+    21300070: skeleton spritesheet calciumtrice_51
+    21300072: skeleton spritesheet calciumtrice_53
+    21300074: skeleton spritesheet calciumtrice_55
+    21300076: skeleton spritesheet calciumtrice_57
+    21300078: skeleton spritesheet calciumtrice_59
+    21300080: skeleton spritesheet calciumtrice_60
+    21300082: skeleton spritesheet calciumtrice_62
+    21300084: skeleton spritesheet calciumtrice_64
+    21300086: skeleton spritesheet calciumtrice_66
+    21300088: skeleton spritesheet calciumtrice_67
+    21300090: skeleton spritesheet calciumtrice_68
+    21300092: skeleton spritesheet calciumtrice_69
+    21300094: skeleton spritesheet calciumtrice_71
+    21300096: skeleton spritesheet calciumtrice_73
+    21300098: skeleton spritesheet calciumtrice_75
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,8 +79,8 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,20 +88,670 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_8
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 96
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 96
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_12
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 96
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_14
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 96
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_16
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 96
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_18
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 96
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_20
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 96
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_22
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 96
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_24
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 96
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_26
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 96
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_27
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_28
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_29
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_30
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_31
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_33
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 64
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_35
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 64
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_37
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 64
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_39
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 64
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_41
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 64
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_43
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 32
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_45
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 32
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_47
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 32
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_51
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 32
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_53
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_55
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 32
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_57
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 32
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_59
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 32
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_60
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_62
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_64
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_66
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_67
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_68
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_69
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_71
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_73
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 0
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: skeleton spritesheet calciumtrice_75
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

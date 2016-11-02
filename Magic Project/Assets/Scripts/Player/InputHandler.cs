@@ -21,8 +21,8 @@ public class InputHandler : IComponent {
 
     void handleInput()
     {
-        float horzAxis = Input.GetAxis("Horizontal");
-        float vertAxis = Input.GetAxis("Vertical");
+        float horzAxis = Input.GetAxisRaw("Horizontal");
+        float vertAxis = Input.GetAxisRaw("Vertical");
         playerMovement_.Move(vertAxis, horzAxis);
 
         if (Input.GetKeyDown(KeyCode.Z)) zKey_.execute();
