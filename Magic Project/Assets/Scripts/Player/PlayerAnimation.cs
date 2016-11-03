@@ -7,6 +7,7 @@ public class PlayerAnimation : Subject, IComponent, IObserver
     private Rigidbody2D rb2D_;
     private bool isAttacking = false;
     private bool isHealing = false;
+    private bool isMoving = false;
 
     public PlayerAnimation(Animator anim, Rigidbody2D rb2D)
     {
@@ -16,7 +17,7 @@ public class PlayerAnimation : Subject, IComponent, IObserver
 
     public void update()
     {
-        animator_.SetFloat("vel", Mathf.Abs(rb2D_.velocity.x) + Mathf.Abs(rb2D_.velocity.y));
+        animator_.SetBool("move", isMoving);
 
         NotifyInAnimationEnd(ref isAttacking, "player_attack", Event.EVENT_ACTOR_ATTACK_ANIM_ENDED);
         NotifyInAnimationEnd(ref isHealing, "player_heal", Event.EVENT_ACTOR_HEAL_ANIM_ENDED);
@@ -44,6 +45,12 @@ public class PlayerAnimation : Subject, IComponent, IObserver
     {
         switch(ev)
         {
+            case Event.EVENT_ACTOR_MOVE:
+                isMoving = true;
+                break;
+            case Event.EVENT_ACTOR_STOP:
+                isMoving = false;
+                break;
             case Event.EVENT_ACTOR_ATTACK:
                 animator_.SetTrigger("attack");
                 isAttacking = true;

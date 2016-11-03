@@ -8,12 +8,22 @@ public class PlayerActions : Subject, IObserver, IGameActor {
     private bool facingRight_ = true;
     private bool canAct = true;
     private Transform transform_;
+    private Vector3 lastPos;
+    private float lastPosThreshhold = 0.01f;
 
     public PlayerActions(Transform transform, float speed, Rigidbody2D rb2D)
     {
         transform_ = transform;
         speed_ = speed;
         rb2D_ = rb2D;
+    }
+
+    public void fixedUpdate()
+    {
+        if (Vector2.Distance(transform_.position, lastPos) > lastPosThreshhold) notify(null, Event.EVENT_ACTOR_MOVE);
+        else notify(null, Event.EVENT_ACTOR_STOP);
+
+        lastPos = transform_.position;
     }
 
     public void Move(float vert, float horz)

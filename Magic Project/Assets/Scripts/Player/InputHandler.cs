@@ -17,6 +17,9 @@ public class InputHandler : IComponent {
     public void update()
     {
         handleInput();
+
+        //KILL ME
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
     }
 
     void handleInput()

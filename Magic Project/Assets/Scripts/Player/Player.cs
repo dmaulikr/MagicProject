@@ -37,4 +37,9 @@ public class Player : MonoBehaviour {
         foreach (IComponent comp in components_)
             comp.update();
 	}
+
+    void FixedUpdate()
+    {
+        movement_.fixedUpdate();
+    }
 }
