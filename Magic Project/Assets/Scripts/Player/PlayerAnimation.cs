@@ -1,21 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class PlayerAnimation : Subject, IComponent, IObserver
+public class PlayerAnimation : Subject, IObserver
 {
     private Animator animator_;
-    private Rigidbody2D rb2D_;
     private bool isAttacking = false;
     private bool isHealing = false;
     private bool isMoving = false;
 
-    public PlayerAnimation(Animator anim, Rigidbody2D rb2D)
+    private AnimationController animController;
+
+    void Start()
     {
-        animator_ = anim;
-        rb2D_ = rb2D;
+        animator_ = GetComponent<Animator>();
+        animController = new AnimationController(animator_);
     }
 
-    public void update()
+    void FixedUpdate()
     {
         animator_.SetBool("move", isMoving);
 
@@ -23,22 +23,10 @@ public class PlayerAnimation : Subject, IComponent, IObserver
         NotifyInAnimationEnd(ref isHealing, "player_heal", Event.EVENT_ACTOR_HEAL_ANIM_ENDED);
     }
 
-    bool AnimatorIsPlaying()
-    {
-        return animator_.GetCurrentAnimatorStateInfo(0).length >
-               animator_.GetCurrentAnimatorStateInfo(0).normalizedTime;
-    }
-    bool AnimatorIsPlaying(string stateName)
-    {
-        return AnimatorIsPlaying() && animator_.GetCurrentAnimatorStateInfo(0).IsName(stateName);
-    }
     void NotifyInAnimationEnd(ref bool isAnimating, string stateName, Event notification)
     {
-        if(isAnimating && !AnimatorIsPlaying(stateName))
-        {
-            isAnimating = false;
+        if(animController.HasAnimationEnded(ref isAnimating, stateName))
             notify(null, notification);
-        }
     }
 
     public void onNotify(IGameActor actor, Event ev)
