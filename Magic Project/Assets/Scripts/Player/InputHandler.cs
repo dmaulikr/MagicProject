@@ -1,32 +1,36 @@
 ﻿using UnityEngine;
 
-public class InputHandler : MonoBehaviour {
+public class InputHandler : IComponent {
 
-    private IGameActor playerActions_;
+    private PlayerActions playerMovement_;
     private ICommand zKey_;
     private ICommand xKey_;
 
-    void Start()
+    public InputHandler(PlayerActions playerMovement)
     {
-        playerActions_ = GetComponent<PlayerActions>();
+        playerMovement_ = playerMovement;
 
-        zKey_ = new AttackCommand(playerActions_);
-        xKey_ = new BuffCommand(playerActions_, Buff.BUFF_HEAL);
+        zKey_ = new AttackCommand(playerMovement_);
+        xKey_ = new BuffCommand(playerMovement_, Buff.BUFF_HEAL);
     }
 
-    void Update()
+    public void update()
     {
-        if(playerActions_ != null) handleInput();
+        handleInput();
+
+        //KILL ME
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
     }
 
     void handleInput()
     {
         float horzAxis = Input.GetAxisRaw("Horizontal");
         float vertAxis = Input.GetAxisRaw("Vertical");
-        playerActions_.move(vertAxis, horzAxis);
+        playerMovement_.Move(vertAxis, horzAxis);
 
         if (Input.GetKeyDown(KeyCode.Z)) zKey_.execute();
         if (Input.GetKeyDown(KeyCode.X)) xKey_.execute();
+
     }
 
 }

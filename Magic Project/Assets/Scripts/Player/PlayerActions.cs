@@ -1,65 +1,47 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
+
 
 public class PlayerActions : Subject, IObserver, IGameActor {
 
-    [SerializeField]
     private float speed_;
-    [SerializeField]
-    private float attackDistance_;
-    [SerializeField]
-    private LayerMask enemyLayer_;
-    [SerializeField]
-    private int attackDamage_;
-
-    private float spriteHeight_;
     private Rigidbody2D rb2D_;
-
-    private List<IGameActor> enemiesOnTarget_;
-
-    private bool facingRight = true;
+    private bool facingRight_ = true;
     private bool canAct = true;
+    private Transform transform_;
     private Vector3 lastPos;
     private float lastPosThreshhold = 0.01f;
 
-    public void Start()
+    public PlayerActions(Transform transform, float speed, Rigidbody2D rb2D)
     {
-        spriteHeight_ = GetComponent<SpriteRenderer>().sprite.bounds.size.y;
-        rb2D_ = GetComponent<Rigidbody2D>();
-
-        enemiesOnTarget_ = new List<IGameActor>();
+        transform_ = transform;
+        speed_ = speed;
+        rb2D_ = rb2D;
     }
 
-    public void FixedUpdate()
+    public void fixedUpdate()
     {
-        if (Vector2.Distance(transform.position, lastPos) > lastPosThreshhold) notify(null, Event.EVENT_ACTOR_MOVE);
+        if (Vector2.Distance(transform_.position, lastPos) > lastPosThreshhold) notify(null, Event.EVENT_ACTOR_MOVE);
         else notify(null, Event.EVENT_ACTOR_STOP);
 
-        lastPos = transform.position;
+        lastPos = transform_.position;
     }
 
-    #region IGameActor :: move
-    public void move(float vert, float horz)
+    public void Move(float vert, float horz)
     {
         if (!canAct) rb2D_.velocity = Vector2.zero;
         else {
-            rb2D_.velocity = Vector3.Normalize(vert * Vector2.up + horz * Vector2.right) * speed_;
+            rb2D_.velocity = (vert * Vector2.up + horz * Vector2.right) * speed_;
             Flip(horz);
         }
     }
-    private void Flip(float horz)
+    public void Attack()
     {
-        if (facingRight && horz < 0 || !facingRight && horz > 0)
-        {
-            facingRight = !facingRight;
-            Vector3 s = transform.localScale;
-            s.x *= -1f;
-            transform.localScale = s;
-        }
+        if (!canAct) return;
+        Debug.Log("Pow!!");
+        notify(null, Event.EVENT_ACTOR_ATTACK);
+        canAct = false;
     }
-    #endregion
-
-    public void useBuff(IGameActor actor, Buff buff)
+    public void UseBuff(IGameActor actor, Buff buff)
     {
         if (!canAct) return;
         if (buff == Buff.BUFF_HEAL)
@@ -69,56 +51,6 @@ public class PlayerActions : Subject, IObserver, IGameActor {
             canAct = false;
         }
     }
-    public void takeDamage(int damage)
-    {
-
-    }
-    
-    #region IGameActor :: attack
-    public void attack()
-    {
-        if (!canAct) return;
-        notify(null, Event.EVENT_ACTOR_ATTACK);
-
-        foreach (IGameActor enemy in enemiesOnTarget_)
-        {
-            if (enemy != null) enemy.takeDamage(attackDamage_);
-        }
-
-        canAct = false;
-    }
-    public void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag == "Enemy")
-        {
-            IGameActor enemy = col.GetComponent<IGameActor>();
-            AddEnemyToTargerList(enemy);
-            ((Enemy)enemy).deathEvent += RemoveEnemyFromTargerList;
-        }
-    }
-    public void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.tag == "Enemy")
-        {
-            IGameActor enemy = col.GetComponent<IGameActor>();
-            RemoveEnemyFromTargerList(enemy);
-        }
-    }
-    private void AddEnemyToTargerList(IGameActor enemy)
-    {
-        #if UNITY_EDITOR
-        if (enemy == null) Error.ShowError("Object with \"Enemy\" tag does not have a IGameActor script");
-        #endif
-        enemiesOnTarget_.Add(enemy);
-    }
-    private void RemoveEnemyFromTargerList(IGameActor enemy)
-    {
-        #if UNITY_EDITOR
-        if (enemy == null) Error.ShowError("Object with \"Enemy\" tag does not have a IGameActor script");
-        #endif
-        enemiesOnTarget_.Remove(enemy);
-    }
-    #endregion
 
     public void onNotify(IGameActor actor, Event ev)
     {
@@ -131,5 +63,14 @@ public class PlayerActions : Subject, IObserver, IGameActor {
         }
     }
 
-    
+    void Flip(float horz)
+    {
+        if (facingRight_ && horz < 0 || !facingRight_ && horz > 0)
+        {
+            facingRight_ = !facingRight_;
+            Vector3 s = transform_.localScale;
+            s.x *= -1f;
+            transform_.localScale = s;
+        }
+    }
 }
