@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections.Generic;
 
-public class Subject {
-
+public class Subject : MonoBehaviour
+{
     List<IObserver> observers_ = new List<IObserver>();
 
     public void addObserver(IObserver observer)
@@ -20,3 +21,4 @@ public class Subject {
             ob.onNotify(actor, ev);
     }
 }
+

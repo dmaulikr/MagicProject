@@ -1,5 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿public enum Direction
+{
+    DIR_UP, DIR_DOWN, DIR_LEFT, DIR_RIGHT,
+    DIR_UP_LEFT, DIR_UP_RIGHT, DIR_DOWN_LEFT, DIR_DOWN_RIGHT
+};
 
 public interface ICommand
 {
@@ -21,7 +24,7 @@ public class MoveCommand : ICommand
 
     public void execute()
     {
-        actor_.Move(vert_, horz_);
+        actor_.move(vert_, horz_);
     }
 }
 public class AttackCommand : ICommand
@@ -35,7 +38,7 @@ public class AttackCommand : ICommand
 
     public void execute()
     {
-        actor_.Attack();
+        actor_.attack();
     }
 }
 public class BuffCommand : ICommand
@@ -51,6 +54,6 @@ public class BuffCommand : ICommand
 
     public void execute()
     {
-        actor_.UseBuff(actor_, buff_);
+        actor_.useBuff(actor_, buff_);
     }
 }

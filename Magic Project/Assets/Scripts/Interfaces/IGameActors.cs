@@ -1,7 +1,8 @@
 ﻿public enum Event
 {
     EVENT_ACTOR_MOVE, EVENT_ACTOR_STOP, EVENT_ACTOR_ATTACK, EVENT_ACTOR_DIE,
-    EVENT_ACTOR_HEAL_BUFF, EVENT_ACTOR_ATTACK_ANIM_ENDED, EVENT_ACTOR_HEAL_ANIM_ENDED
+    EVENT_ACTOR_HEAL_BUFF, EVENT_ACTOR_ATTACK_ANIM_ENDED, EVENT_ACTOR_HEAL_ANIM_ENDED,
+    EVENT_ACTOR_TAKE_DAMAGE, EVENT_ACTOR_DIE_ANIM_ENDED, EVENT_ACTOR_TAKE_DAMAGE_ANIM_ENDED
 };
 
 public enum Buff
@@ -11,7 +12,9 @@ public enum Buff
 
 public interface IGameActor
 {
-    void Move(float vert, float horz);
-    void Attack();
-    void UseBuff(IGameActor entity, Buff buff);
+    void move(float vert, float horz);
+    void attack();
+    void useBuff(IGameActor entity, Buff buff);
+    void takeDamage(int damage);
 }
+
