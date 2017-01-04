@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class AnimationController
 {
@@ -9,7 +10,7 @@ public class AnimationController
         animator_ = animator;
     }
 
-    bool AnimatorIsPlaying()
+    public bool AnimatorIsPlaying()
     {
         return animator_.GetCurrentAnimatorStateInfo(0).length >
                animator_.GetCurrentAnimatorStateInfo(0).normalizedTime;
@@ -28,4 +29,5 @@ public class AnimationController
         }
         return false;
     }
+
 }

@@ -21,6 +21,7 @@ public class PlayerActions : Subject, IObserver, IGameActor {
     private bool canAct = true;
     private Vector3 lastPos;
     private float lastPosThreshhold = 0.01f;
+    private bool isHurting = false;
 
     public void Start()
     {
@@ -71,7 +72,11 @@ public class PlayerActions : Subject, IObserver, IGameActor {
     }
     public void takeDamage(int damage)
     {
-
+        if (isHurting) return;
+        notify(null, Event.EVENT_ACTOR_TAKE_DAMAGE);
+        Debug.Log("Ouch!");
+        canAct = false;
+        isHurting = true;
     }
     
     #region IGameActor :: attack
@@ -126,6 +131,10 @@ public class PlayerActions : Subject, IObserver, IGameActor {
         {
             case Event.EVENT_ACTOR_ATTACK_ANIM_ENDED:
             case Event.EVENT_ACTOR_HEAL_ANIM_ENDED:
+                canAct = true;
+                break;
+            case Event.EVENT_ACTOR_TAKE_DAMAGE_ANIM_ENDED:
+                isHurting = false;
                 canAct = true;
                 break;
         }

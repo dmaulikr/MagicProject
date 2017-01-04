@@ -1,9 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
 
 public class Enemy : Subject {
-    public delegate void DeathDelegate(IGameActor actor);
-    public event DeathDelegate deathEvent;
-
+    public event Action<IGameActor> deathEvent;
     protected void ExecuteDeathEvent(IGameActor actor) { deathEvent(actor); }
 }

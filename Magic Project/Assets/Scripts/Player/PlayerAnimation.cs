@@ -6,6 +6,8 @@ public class PlayerAnimation : Subject, IObserver
     private bool isAttacking = false;
     private bool isHealing = false;
     private bool isMoving = false;
+    private bool isHurting = false;
+
 
     private AnimationController animController;
 
@@ -21,6 +23,8 @@ public class PlayerAnimation : Subject, IObserver
 
         NotifyInAnimationEnd(ref isAttacking, "player_attack", Event.EVENT_ACTOR_ATTACK_ANIM_ENDED);
         NotifyInAnimationEnd(ref isHealing, "player_heal", Event.EVENT_ACTOR_HEAL_ANIM_ENDED);
+        NotifyInAnimationEnd(ref isHurting, "player_hurt", Event.EVENT_ACTOR_TAKE_DAMAGE_ANIM_ENDED);
+
     }
 
     void NotifyInAnimationEnd(ref bool isAnimating, string stateName, Event notification)
@@ -46,6 +50,10 @@ public class PlayerAnimation : Subject, IObserver
             case Event.EVENT_ACTOR_HEAL_BUFF:
                 animator_.SetTrigger("heal");
                 isHealing = true;
+                break;
+            case Event.EVENT_ACTOR_TAKE_DAMAGE:
+                animator_.SetTrigger("hurt");
+                isHurting = true;
                 break;
         }
     }
