@@ -57,3 +57,17 @@ public class BuffCommand : ICommand
         actor_.useBuff(actor_, buff_);
     }
 }
+public class InteractCommand : ICommand
+{
+    private IGameActor actor_;
+
+    public InteractCommand(IGameActor actor)
+    {
+        actor_ = actor;
+    }
+
+    public void execute()
+    {
+        actor_.interact();
+    }
+}

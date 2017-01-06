@@ -8,11 +8,14 @@ public class PlayerActions : Subject, IObserver, IGameActor {
     [SerializeField]
     private float attackDistance_;
     [SerializeField]
+    private int attackDamage_;
+    [SerializeField]
     private LayerMask enemyLayer_;
     [SerializeField]
-    private int attackDamage_;
+    private float interactionDist_;
+    [SerializeField]
+    private LayerMask interactableLayer_;
 
-    private float spriteHeight_;
     private Rigidbody2D rb2D_;
 
     private List<IGameActor> enemiesOnTarget_;
@@ -25,7 +28,6 @@ public class PlayerActions : Subject, IObserver, IGameActor {
 
     public void Start()
     {
-        spriteHeight_ = GetComponent<SpriteRenderer>().sprite.bounds.size.y;
         rb2D_ = GetComponent<Rigidbody2D>();
 
         enemiesOnTarget_ = new List<IGameActor>();
@@ -124,6 +126,18 @@ public class PlayerActions : Subject, IObserver, IGameActor {
         enemiesOnTarget_.Remove(enemy);
     }
     #endregion
+
+    public void interact()
+    {
+        var hit = Physics2D.CircleCast(transform.position + interactionDist_/2 * transform.right, interactionDist_, Vector2.up, Mathf.Infinity, interactableLayer_);
+        if (hit.collider == null) return;
+        var hitObj = hit.collider.gameObject;
+        IInteractable interactable = hitObj.GetComponent<IInteractable>();
+        #if UNITY_EDITOR
+        if (interactable == null) Error.ShowError("Object with \"Interactable\" tag does not have a IInteractable script");
+        #endif
+        interactable.interact();
+    }
 
     public void onNotify(IGameActor actor, Event ev)
     {

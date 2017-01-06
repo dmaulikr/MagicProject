@@ -17,5 +17,6 @@ public interface IGameActor
     void attack();
     void useBuff(IGameActor entity, Buff buff);
     void takeDamage(int damage);
+    void interact();
 }
 

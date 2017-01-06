@@ -91,6 +91,10 @@ public class SlimeActions : Enemy, IGameActor, IObserver {
             notify(this, Event.EVENT_ACTOR_TAKE_DAMAGE);
         isHurting = true;
     }
+    public void interact()
+    {
+
+    }
 
     private void Die()
     {
