@@ -10,9 +10,9 @@ public class SlimeActions : Enemy, IGameActor, IObserver {
     [SerializeField]
     private float speed_;
     [SerializeField]
-    private Transform near_;
+    private Vector2 attackColliderOffset_;
     [SerializeField]
-    private float nearRadius_ = .5f;
+    private Vector2 attackColliderSize_;
     [SerializeField]
     private LayerMask attackMask_;
     [SerializeField]
@@ -68,12 +68,19 @@ public class SlimeActions : Enemy, IGameActor, IObserver {
 
     public void attack()
     {
-        RaycastHit2D hit = Physics2D.CircleCast(near_.position, nearRadius_, Vector2.up, Mathf.Infinity, attackMask_);
+        int lookingSide = facingRight_ ? 1 : -1;
+        Vector2 correctedOffset = attackColliderOffset_;
+        correctedOffset.x *= lookingSide;
+
+        Vector2 origin = (Vector2)transform.position + correctedOffset;
+
+        var hit = Physics2D.BoxCast(origin, attackColliderSize_, 0f, Vector2.zero, Mathf.Infinity, attackMask_);
+        if (hit.collider == null) return;
         GameObject player = hit.collider.gameObject;
         IGameActor playerActor = player.GetComponent<IGameActor>();
         #if UNITY_EDITOR
         if (playerActor == null) Error.ShowError("Object with \"Player\" tag does not have a IGameActor script");
-#endif
+        #endif
 
         playerActor.takeDamage(1);
 

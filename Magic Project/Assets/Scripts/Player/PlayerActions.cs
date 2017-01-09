@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
+using System;
 
 public class PlayerActions : Subject, IObserver, IGameActor {
 
@@ -12,13 +12,15 @@ public class PlayerActions : Subject, IObserver, IGameActor {
     [SerializeField]
     private LayerMask enemyLayer_;
     [SerializeField]
+    private Vector2 attackColliderOffset_;
+    [SerializeField]
+    private Vector2 attackColliderSize_;
+    [SerializeField]
     private float interactionDist_;
     [SerializeField]
     private LayerMask interactableLayer_;
 
     private Rigidbody2D rb2D_;
-
-    private List<IGameActor> enemiesOnTarget_;
 
     private bool facingRight = true;
     private bool canAct = true;
@@ -30,7 +32,8 @@ public class PlayerActions : Subject, IObserver, IGameActor {
     {
         rb2D_ = GetComponent<Rigidbody2D>();
 
-        enemiesOnTarget_ = new List<IGameActor>();
+        PlayerAnimation anim = GetComponent<PlayerAnimation>();
+        anim.addObserver(this);
     }
 
     public void FixedUpdate()
@@ -87,6 +90,8 @@ public class PlayerActions : Subject, IObserver, IGameActor {
         if (!canAct) return;
         notify(null, Event.EVENT_ACTOR_ATTACK);
 
+        var enemiesOnTarget_ = GetEnemiesOnTarget();
+
         foreach (IGameActor enemy in enemiesOnTarget_)
         {
             if (enemy != null) enemy.takeDamage(attackDamage_);
@@ -94,36 +99,26 @@ public class PlayerActions : Subject, IObserver, IGameActor {
 
         canAct = false;
     }
-    public void OnTriggerEnter2D(Collider2D col)
+    private IGameActor[] GetEnemiesOnTarget()
     {
-        if (col.tag == "Enemy")
-        {
-            IGameActor enemy = col.GetComponent<IGameActor>();
-            AddEnemyToTargerList(enemy);
-            ((Enemy)enemy).deathEvent += RemoveEnemyFromTargerList;
-        }
+        int lookingSide = facingRight ? 1 : -1;
+        Vector2 correctedOffset = attackColliderOffset_;
+        correctedOffset.x *= lookingSide;
+
+        Vector2 origin = (Vector2)transform.position + correctedOffset;
+
+        var hits = Physics2D.BoxCastAll(origin, attackColliderSize_, 0f, Vector2.zero, Mathf.Infinity, enemyLayer_);
+        IGameActor[] enemiesOnTarget = Array.ConvertAll(hits, new Converter<RaycastHit2D, IGameActor>(GetGameActor));
+
+        return enemiesOnTarget;
     }
-    public void OnTriggerExit2D(Collider2D col)
+    private IGameActor GetGameActor(RaycastHit2D hit)
     {
-        if (col.tag == "Enemy")
-        {
-            IGameActor enemy = col.GetComponent<IGameActor>();
-            RemoveEnemyFromTargerList(enemy);
-        }
-    }
-    private void AddEnemyToTargerList(IGameActor enemy)
-    {
+        IGameActor enemy = hit.collider.gameObject.GetComponent<IGameActor>();
         #if UNITY_EDITOR
         if (enemy == null) Error.ShowError("Object with \"Enemy\" tag does not have a IGameActor script");
         #endif
-        enemiesOnTarget_.Add(enemy);
-    }
-    private void RemoveEnemyFromTargerList(IGameActor enemy)
-    {
-        #if UNITY_EDITOR
-        if (enemy == null) Error.ShowError("Object with \"Enemy\" tag does not have a IGameActor script");
-        #endif
-        enemiesOnTarget_.Remove(enemy);
+        return enemy;
     }
     #endregion
 

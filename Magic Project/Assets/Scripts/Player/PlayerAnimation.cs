@@ -15,6 +15,9 @@ public class PlayerAnimation : Subject, IObserver
     {
         animator_ = GetComponent<Animator>();
         animController = new AnimationController(animator_);
+
+        PlayerActions actions = GetComponent<PlayerActions>();
+        actions.addObserver(this);
     }
 
     void FixedUpdate()
