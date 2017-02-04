@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5e01d6bc0605fa8409c9cd8f345ecabc
-timeCreated: 1483824222
+timeCreated: 1484366660
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -296,7 +296,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -339,7 +339,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings:
   - buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     textureFormat: -3
     compressionQuality: 50
     allowsAlphaSplitting: 0
@@ -2880,7 +2880,7 @@ TextureImporter:
         x: 352
         y: 224
         width: 16
-        height: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2916,10 +2916,10 @@ TextureImporter:
       name: dungeon tileset calciumtrice_351
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 192
-        width: 16
-        height: 16
+        width: 10
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3020,10 +3020,10 @@ TextureImporter:
       name: dungeon tileset calciumtrice_359
       rect:
         serializedVersion: 2
-        x: 144
+        x: 148
         y: 192
-        width: 16
-        height: 16
+        width: 8
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3202,10 +3202,10 @@ TextureImporter:
       name: dungeon tileset calciumtrice_381
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 160
-        width: 16
-        height: 16
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3215,10 +3215,10 @@ TextureImporter:
       name: dungeon tileset calciumtrice_382
       rect:
         serializedVersion: 2
-        x: 16
+        x: 21
         y: 160
-        width: 16
-        height: 16
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3228,10 +3228,10 @@ TextureImporter:
       name: dungeon tileset calciumtrice_383
       rect:
         serializedVersion: 2
-        x: 32
+        x: 37
         y: 160
-        width: 16
-        height: 16
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3241,10 +3241,10 @@ TextureImporter:
       name: dungeon tileset calciumtrice_384
       rect:
         serializedVersion: 2
-        x: 48
+        x: 53
         y: 160
-        width: 16
-        height: 16
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3254,10 +3254,10 @@ TextureImporter:
       name: dungeon tileset calciumtrice_385
       rect:
         serializedVersion: 2
-        x: 64
+        x: 69
         y: 160
-        width: 16
-        height: 16
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3267,10 +3267,10 @@ TextureImporter:
       name: dungeon tileset calciumtrice_386
       rect:
         serializedVersion: 2
-        x: 80
+        x: 85
         y: 160
-        width: 16
-        height: 16
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3280,10 +3280,10 @@ TextureImporter:
       name: dungeon tileset calciumtrice_387
       rect:
         serializedVersion: 2
-        x: 96
+        x: 101
         y: 160
-        width: 16
-        height: 16
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

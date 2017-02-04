@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(PlayerAnimation), typeof(Inventory))]
 public class PlayerActions : Subject, IObserver, IGameActor {
 
     [SerializeField]
@@ -21,6 +22,7 @@ public class PlayerActions : Subject, IObserver, IGameActor {
     private LayerMask interactableLayer_;
 
     private Rigidbody2D rb2D_;
+    private Inventory inventory_;
 
     private bool facingRight = true;
     private bool canAct = true;
@@ -31,6 +33,7 @@ public class PlayerActions : Subject, IObserver, IGameActor {
     public void Start()
     {
         rb2D_ = GetComponent<Rigidbody2D>();
+        inventory_ = GetComponent<Inventory>();
 
         PlayerAnimation anim = GetComponent<PlayerAnimation>();
         anim.addObserver(this);
@@ -68,12 +71,8 @@ public class PlayerActions : Subject, IObserver, IGameActor {
     public void useBuff(IGameActor actor, Buff buff)
     {
         if (!canAct) return;
-        if (buff == Buff.BUFF_HEAL)
-        {
-            Debug.Log("Healed!");
-            notify(null, Event.EVENT_ACTOR_HEAL_BUFF);
-            canAct = false;
-        }
+        notify(null, Event.EVENT_ACTOR_HEAL_BUFF);
+        canAct = false;
     }
     public void takeDamage(int damage)
     {

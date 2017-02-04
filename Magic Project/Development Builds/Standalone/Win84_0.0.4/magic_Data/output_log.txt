@@ -1,0 +1,100 @@
+Mono path[0] = 'C:/Users/felip_000/OneDrive/Documentos/Unity Projects/MagicProject/Magic Project/Development Builds/Standalone/Win84_0.0.4/magic_Data/Managed'
+Mono path[1] = 'C:/Users/felip_000/OneDrive/Documentos/Unity Projects/MagicProject/Magic Project/Development Builds/Standalone/Win84_0.0.4/magic_Data/Mono'
+Mono config path = 'C:/Users/felip_000/OneDrive/Documentos/Unity Projects/MagicProject/Magic Project/Development Builds/Standalone/Win84_0.0.4/magic_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/felip_000/OneDrive/Documentos/Unity Projects/MagicProject/Magic Project/Development Builds/Standalone/Win84_0.0.4/magic_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55325
+Multi-casting "[IP] 192.168.15.6 [Port] 55325 [Flags] 2 [Guid] 1475371753 [EditorId] 2605897630 [Version] 1048832 [Id] WindowsPlayer(WS_Felipe) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.15.6:55325]
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 745 (ID=0x1382)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.047 seconds
+Platform assembly: C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Development Builds\Standalone\Win84_0.0.4\magic_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.536705 ms
+Ouch!
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlayerActions:takeDamage(Int32) (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Player\PlayerActions.cs:81)
+SlimeActions:attack() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeActions.cs:90)
+<Attack>c__Iterator0:MoveNext() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:61)
+SlimeAI:ExecuteAction(SlimeState) (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:94)
+SlimeAI:Update() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:52)
+ 
+(Filename: C:/Users/felip_000/OneDrive/Documentos/Unity Projects/MagicProject/Magic Project/Assets/Scripts/Player/PlayerActions.cs Line: 81)
+
+Ouch!
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlayerActions:takeDamage(Int32) (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Player\PlayerActions.cs:81)
+SlimeActions:attack() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeActions.cs:90)
+<Attack>c__Iterator0:MoveNext() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:61)
+SlimeAI:ExecuteAction(SlimeState) (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:94)
+SlimeAI:Update() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:52)
+ 
+(Filename: C:/Users/felip_000/OneDrive/Documentos/Unity Projects/MagicProject/Magic Project/Assets/Scripts/Player/PlayerActions.cs Line: 81)
+
+Ouch!
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlayerActions:takeDamage(Int32) (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Player\PlayerActions.cs:81)
+SlimeActions:attack() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeActions.cs:90)
+<Attack>c__Iterator0:MoveNext() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:61)
+SlimeAI:ExecuteAction(SlimeState) (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:94)
+SlimeAI:Update() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:52)
+ 
+(Filename: C:/Users/felip_000/OneDrive/Documentos/Unity Projects/MagicProject/Magic Project/Assets/Scripts/Player/PlayerActions.cs Line: 81)
+
+Ouch!
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlayerActions:takeDamage(Int32) (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Player\PlayerActions.cs:81)
+SlimeActions:attack() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeActions.cs:90)
+<Attack>c__Iterator0:MoveNext() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:61)
+SlimeAI:ExecuteAction(SlimeState) (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:94)
+SlimeAI:Update() (at C:\Users\felip_000\OneDrive\Documentos\Unity Projects\MagicProject\Magic Project\Assets\Scripts\Enemies\Slime\SlimeAI.cs:52)
+ 
+(Filename: C:/Users/felip_000/OneDrive/Documentos/Unity Projects/MagicProject/Magic Project/Assets/Scripts/Player/PlayerActions.cs Line: 81)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 27e4 -> priority: 1 
+  Thread -> id: 3338 -> priority: 1 

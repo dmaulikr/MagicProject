@@ -12,8 +12,6 @@ public class SlimeAI : MonoBehaviour, IObserver {
     };
 
     [SerializeField]
-    private Transform player_;
-    [SerializeField]
     private float attackCooldown_;
     [SerializeField]
     private float farFromPlayer_;
@@ -24,6 +22,7 @@ public class SlimeAI : MonoBehaviour, IObserver {
 
     private SlimeState state_;
     private Dictionary<SlimeState, int> stateScore_;
+    private Transform player_;
 
     private bool lowHealth_ = false;
     private bool canAct_ = true;
@@ -36,6 +35,8 @@ public class SlimeAI : MonoBehaviour, IObserver {
         actions.addObserver(this);
         SlimeAnimation anim = GetComponent<SlimeAnimation>();
         anim.addObserver(this);
+
+        player_ = GameObject.FindGameObjectWithTag("Player").transform;
 
         stateScore_ = new Dictionary<SlimeState, int>();
         foreach (SlimeState state in Enum.GetValues(typeof(SlimeState)))
@@ -70,7 +71,7 @@ public class SlimeAI : MonoBehaviour, IObserver {
             stateScore_[SlimeState.MOVE_TO_PLAYER] -= 20;
         }
 
-        if(lowHealth_)
+        if(lowHealth_ || cooldown_)
         {
             stateScore_[SlimeState.ATTACK] -= 50;
             stateScore_[SlimeState.FLEE] += 50;
@@ -100,6 +101,9 @@ public class SlimeAI : MonoBehaviour, IObserver {
             case SlimeState.FLEE:
                 distToPlayer = -(player_.position - transform.position);
                 slimeActor_.move(distToPlayer.y, distToPlayer.x);
+                break;
+            default:
+                slimeActor_.move(0f, 0f);
                 break;
         }
     }

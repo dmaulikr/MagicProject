@@ -18,6 +18,11 @@ public class SlimeActions : Enemy, IGameActor, IObserver {
     [SerializeField]
     private int lowHealth_;
 
+    [SerializeField]
+    private Drop[] drops;
+    [SerializeField]
+    private float noiseRange_;
+
     private int health_;
     private Rigidbody2D rb2D_;
     private bool facingRight_ = false;
@@ -106,7 +111,24 @@ public class SlimeActions : Enemy, IGameActor, IObserver {
     private void Die()
     {
         ExecuteDeathEvent(this);
+        DropItems();
         Destroy(gameObject);
+    }
+    private void DropItems()
+    {
+        foreach (Drop drop in drops)
+        {
+            for (int i = 0; i < drop.quantity; i++)
+            {
+                float rnd = Random.Range(0f, 100f);
+                if (rnd > drop.chance) continue;
+
+                Vector3 noise = new Vector2(0, 0);
+                noise.x = Random.Range(-noiseRange_, noiseRange_);
+                noise.y = Random.Range(-noiseRange_, noiseRange_);
+                Instantiate(drop.item, transform.position + noise, Quaternion.identity);
+            }
+        }
     }
 
     public void onNotify(IGameActor actor, Event ev)
